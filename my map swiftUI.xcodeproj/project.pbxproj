@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203482EB281DE49B00D8EB66 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203482EA281DE49B00D8EB66 /* MapController.swift */; };
+		203482ED281DE5B800D8EB66 /* TracksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203482EC281DE5B800D8EB66 /* TracksController.swift */; };
 		20F752C0281DC8560078357E /* my_map_swiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F752BF281DC8560078357E /* my_map_swiftUIApp.swift */; };
 		20F752C2281DC8560078357E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F752C1281DC8560078357E /* ContentView.swift */; };
 		20F752C4281DC85C0078357E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F752C3281DC85C0078357E /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		203482EA281DE49B00D8EB66 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		203482EC281DE5B800D8EB66 /* TracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksController.swift; sourceTree = "<group>"; };
 		20F752BC281DC8560078357E /* my map swiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my map swiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F752BF281DC8560078357E /* my_map_swiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_map_swiftUIApp.swift; sourceTree = "<group>"; };
 		20F752C1281DC8560078357E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				20F752BF281DC8560078357E /* my_map_swiftUIApp.swift */,
+				203482EA281DE49B00D8EB66 /* MapController.swift */,
+				203482EC281DE5B800D8EB66 /* TracksController.swift */,
 				20F752C1281DC8560078357E /* ContentView.swift */,
 				20F752C3281DC85C0078357E /* Assets.xcassets */,
 				20F752C5281DC85C0078357E /* Preview Content */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F752C2281DC8560078357E /* ContentView.swift in Sources */,
+				203482EB281DE49B00D8EB66 /* MapController.swift in Sources */,
+				203482ED281DE5B800D8EB66 /* TracksController.swift in Sources */,
 				20F752C0281DC8560078357E /* my_map_swiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
