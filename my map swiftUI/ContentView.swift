@@ -14,7 +14,7 @@ struct ContentView: View {
         TabView{
             MapController().tabItem {Text("Карта")}
             TracksController().tabItem{Text("Треки")}
-        }
+        }.background(.red)
     }
 }
 

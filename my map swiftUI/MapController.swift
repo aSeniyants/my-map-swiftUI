@@ -10,10 +10,17 @@ import SwiftUI
 import MapKit
 
 struct MapController : View {
-            
+    
+    @StateObject private var ViewModel = MapViewModel()
+    
     var body: some View{
+        
         ZStack{
-            MapBox()
+            Map(coordinateRegion: $ViewModel.region, showsUserLocation: true)
+                        .onAppear{
+                            ViewModel.checkIfLocationServicesIsEnable()
+                        }
+                        .accentColor(Color(.systemPink))
             HStack {
                 Spacer()
                 VStack {
@@ -44,7 +51,9 @@ struct MapController : View {
                                 .font(.system(size: 40))
                         }.frame(width: 50, height: 50)
                     }
-                    Button(action: {print("center")}) {
+                    Button(action: {print("center")
+                        
+                    }) {
                         ZStack{
                             Circle()
                                 .foregroundColor(.white)
@@ -57,26 +66,53 @@ struct MapController : View {
         }
 }
     }
-struct MapBox: View, UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> MKMapView {
-        let mapView = MKMapView()
-        return mapView
+    final class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+        
+        @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 28.28, longitude: 35.35), span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3))
+        
+        var locationManager: CLLocationManager?
+        
+        func checkIfLocationServicesIsEnable() {
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager = CLLocationManager()
+                locationManager!.delegate = self
+            } else {
+                print("доступ запрещен")
+            }
+        }
+        private func checkLocationAuthorization() {
+            print("checkLocationAuthorization start")
+            guard let locationManager = locationManager else { return }
+            switch locationManager.authorizationStatus {
+                
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            case .restricted:
+                print(".restricted")
+            case .denied:
+                print(".denided")
+            case .authorizedAlways, .authorizedWhenInUse:
+                region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3))
+            @unknown default:
+                break
+            }
+        }
+        func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+            checkLocationAuthorization()
+        }
+        
     }
-    
-    func updateUIView(_ uiView: MKMapView, context: Context) {
-        //
-    }
-}
 
-struct naviButton: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .frame(width: 50, height: 50)
-            .foregroundColor(Color.black)
-            .background(Color.white)
-            .clipShape(Circle())
-    }
-}
+    //----------------------------
+//struct naviButton: ButtonStyle {
+//    func makeBody(configuration: Self.Configuration) -> some View {
+//        configuration.label
+//            .frame(width: 50, height: 50)
+//            .foregroundColor(Color.black)
+//            .background(Color.white)
+//            .clipShape(Circle())
+//    }
+//}
+    //----------------------------
 }
 
