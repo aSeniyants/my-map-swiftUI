@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 @main
-struct my_map_swiftUIApp: App {
+struct my_map_swiftUIApp: SwiftUI.App {
+    private let realm = try! Realm()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(realm: realm)
         }
     }
 }

@@ -13,9 +13,11 @@
 		20F752C2281DC8560078357E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F752C1281DC8560078357E /* ContentView.swift */; };
 		20F752C4281DC85C0078357E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F752C3281DC85C0078357E /* Assets.xcassets */; };
 		20F752C7281DC85C0078357E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F752C6281DC85C0078357E /* Preview Assets.xcassets */; };
+		35FFBB98B7D4693F5CEE52B8 /* Pods_my_map_swiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6FD06F24B18B8109A7295C /* Pods_my_map_swiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044E2DF600CC2D13791D1C9D /* Pods-my map swiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my map swiftUI.debug.xcconfig"; path = "Target Support Files/Pods-my map swiftUI/Pods-my map swiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		203482EA281DE49B00D8EB66 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		203482EC281DE5B800D8EB66 /* TracksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksController.swift; sourceTree = "<group>"; };
 		20F752BC281DC8560078357E /* my map swiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my map swiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +25,8 @@
 		20F752C1281DC8560078357E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20F752C3281DC85C0078357E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20F752C6281DC85C0078357E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E7991248223F7D6BFE0C716 /* Pods-my map swiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my map swiftUI.release.xcconfig"; path = "Target Support Files/Pods-my map swiftUI/Pods-my map swiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		5C6FD06F24B18B8109A7295C /* Pods_my_map_swiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_my_map_swiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FFBB98B7D4693F5CEE52B8 /* Pods_my_map_swiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,8 @@
 			children = (
 				20F752BE281DC8560078357E /* my map swiftUI */,
 				20F752BD281DC8560078357E /* Products */,
+				7761318FA1CAA57B93416145 /* Pods */,
+				212C2070CA1828214377CDFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		212C2070CA1828214377CDFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C6FD06F24B18B8109A7295C /* Pods_my_map_swiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7761318FA1CAA57B93416145 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				044E2DF600CC2D13791D1C9D /* Pods-my map swiftUI.debug.xcconfig */,
+				2E7991248223F7D6BFE0C716 /* Pods-my map swiftUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20F752CA281DC85C0078357E /* Build configuration list for PBXNativeTarget "my map swiftUI" */;
 			buildPhases = (
+				2BA1CB67B8B60F518EB9F936 /* [CP] Check Pods Manifest.lock */,
 				20F752B8281DC8560078357E /* Sources */,
 				20F752B9281DC8560078357E /* Frameworks */,
 				20F752BA281DC8560078357E /* Resources */,
+				2E21D357B05BB8D14BEEE5CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BA1CB67B8B60F518EB9F936 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-my map swiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E21D357B05BB8D14BEEE5CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-my map swiftUI/Pods-my map swiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-my map swiftUI/Pods-my map swiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-my map swiftUI/Pods-my map swiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20F752B8281DC8560078357E /* Sources */ = {
@@ -271,6 +340,7 @@
 		};
 		20F752CB281DC85C0078357E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044E2DF600CC2D13791D1C9D /* Pods-my map swiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +373,7 @@
 		};
 		20F752CC281DC85C0078357E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7991248223F7D6BFE0C716 /* Pods-my map swiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
